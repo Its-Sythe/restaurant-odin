@@ -11,7 +11,7 @@ const homePage = (function() {
         logoContainer.id = "logoContainer";
         const resName = document.createElement("p");
         resName.id = "resName"
-        resName.innerHTML = "Wannabe Ichiraku Ramen"
+        resName.textContent = "Wannabe Ichiraku Ramen"
         const logoImg = document.createElement("img");
         logoImg.id = "logo";
         logoImg.src = "https://img.freepik.com/free-vector/hand-drawn-ramen-illustration_23-2151176906.jpg?t=st=1746199331~exp=1746202931~hmac=89f53d4f53ab4f8a8f77cfaf689a2eeb25e4e071532cf7ac2375be0c71c01bfb&w=900";
@@ -29,22 +29,22 @@ const homePage = (function() {
         const timesList = document.createElement("ul");
 
         const daysTitle = document.createElement("p");
-        daysTitle.innerHTML = "Days: ";
+        daysTitle.textContent = "Days: ";
         dayList.append(daysTitle)
         for (let d = 0; d < weekDays.length; d++) {
             const li = document.createElement("li");
             li.id = "days";
-            li.innerHTML = weekDays[d];
+            li.textContent = weekDays[d];
             dayList.append(li);
         }
 
         const timeTitle = document.createElement("p");
-        timeTitle.innerHTML = "Hours: "
+        timeTitle.textContent = "Hours: "
         timesList.append(timeTitle)
         for (let t = 0; t < weekDays.length; t++) {
             const li = document.createElement("li");
             li.id = "hours"
-            li.innerHTML = "8 hours"
+            li.textContent = "8 hours"
             timesList.append(li);
         }
 
@@ -59,7 +59,7 @@ const homePage = (function() {
 
         for (let n = 0; n < staffNames.length; n++) {
             const name = document.createElement("p");
-            name.innerHTML = staffNames[n];
+            name.textContent = staffNames[n];
             staffContainer.append(name)
         }
 
