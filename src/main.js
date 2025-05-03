@@ -4,8 +4,8 @@ import { menu } from "./menu";
 import { more } from "./contact";
 
 const contentContainer = document.getElementById("content");
-const homeTab = home.homeContainer;
-const menuTab = menu.menuItems();
+const homeTab = home;
+const menuTab = menu;
 
 
 contentContainer.append(homeTab);

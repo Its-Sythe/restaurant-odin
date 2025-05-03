@@ -1,4 +1,4 @@
-const homePage = (function() {
+const homePage = function() {
     const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
     function createDiv() {
@@ -76,12 +76,8 @@ const homePage = (function() {
     const staff = staffSpace();
 
     homeContainer.append(logo, info, staff);
+    return homeContainer
+}
 
-    return {
-        homeContainer
-    }
-
-})();
-
-export const home = homePage;
+export const home = homePage();
 

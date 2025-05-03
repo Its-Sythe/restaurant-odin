@@ -1,4 +1,4 @@
-const morePage = (function() {
+const morePage = function() {
     const contactsContainer = document.createElement("section");
     contactsContainer.id = "contactContainer"
     const contactInfo = document.createElement("div");
@@ -28,7 +28,7 @@ const morePage = (function() {
     contactsContainer.append(contactInfo, superContainer, managerContainer, hrContainer);
 
     return contactsContainer;
-})();
+}
 
-export const more = morePage;
+export const more = morePage();
 
