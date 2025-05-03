@@ -133,3 +133,39 @@ ul > li {
 #itemPrice > #foodPrice {
     height: 30%;
 }
+
+/* Contact tab styling */
+#contactContainer {
+    display: grid;
+    grid-template-rows: 200px 150px 150px 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+}
+
+#contactUs {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 35px;
+    font-size: 2.3em;
+    font-weight: 800;
+    font-family: sans-serif;
+    box-shadow: 8px 0px 4px rgb(0, 0, 0);
+}
+
+#super, #manager, #hr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 400px;
+    border: 1px solid;
+    box-shadow: 8px 0px 4px rgb(0, 0, 0);
+    border-radius: 35px;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
