@@ -1,3 +1,4 @@
+/* Main Page Styling */
 * {
     padding: 0;
     margin: 0;
@@ -30,7 +31,6 @@ nav > button {
 }
 
 nav > button:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0);
     cursor: pointer;
 }
 
@@ -40,13 +40,15 @@ nav > button:hover {
     border: 1px solid;
 }
 
+/* Home page styling */
 #homeContainer {
-    width: 700px;
+    width: 650px;
     height: 900px;
     display: grid;
     grid-template-rows: 300px 2fr .5fr;
     font-size: 1.5em;
     font-family: cursive, sans-serif;
+    gap: 12px;
 }
 
 #logoContainer {
@@ -74,9 +76,15 @@ nav > button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 52px;
-    font-size: 1.7em;
+    gap: 120px;
+    font-size: 1.5em;
     font-family: courier;
+}
+
+#info > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 ul > li {
@@ -92,3 +100,36 @@ ul > li {
     gap: 5px;
 }
 
+#logoContainer, #info, #staffContainer {
+    border-bottom: 1px solid;
+}
+
+/* Menu page styling */
+#menuItems {
+    display: grid;
+    grid-template-columns: 200px 300px 100px;
+    justify-content: center;
+    align-items: center;
+    height: calc(900px - 10px);
+    gap: 24px;
+}
+
+#itemName,
+#itemDesc,
+#itemPrice
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(900px - 300px);
+    font-size: 1.5em;
+    font-family: cursive, sans-serif
+}
+
+
+#itemName > #foodName,
+#itemDesc > #foodDesc,
+#itemPrice > #foodPrice {
+    height: 30%;
+}

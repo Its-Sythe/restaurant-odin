@@ -1,6 +1,5 @@
 const homePage = (function() {
     const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    const homeContent = document.getElementById("content");
 
     function createDiv() {
         return document.createElement("div");
@@ -14,7 +13,7 @@ const homePage = (function() {
         logoContainer.id = "logoContainer";
         const resName = document.createElement("p");
         resName.id = "resName"
-        resName.textContent = "Wannabe Ichiraku Ramen"
+        resName.textContent = "A Ramen Shop"
         const logoImg = document.createElement("img");
         logoImg.id = "logo";
         logoImg.src = "https://img.freepik.com/free-vector/hand-drawn-ramen-illustration_23-2151176906.jpg?t=st=1746199331~exp=1746202931~hmac=89f53d4f53ab4f8a8f77cfaf689a2eeb25e4e071532cf7ac2375be0c71c01bfb&w=900";
@@ -58,7 +57,10 @@ const homePage = (function() {
     function staffSpace() {
         const staffNames = ["Ayame", "Teuchi", "Some Random Extra"]
         const staffContainer = createDiv();
+        const staffMsg = document.createElement("p");
         staffContainer.id = "staffContainer";
+        staffMsg.textContent = "Our lovely workers:"
+        staffContainer.append(staffMsg)
 
         for (let n = 0; n < staffNames.length; n++) {
             const name = document.createElement("p");
@@ -74,7 +76,6 @@ const homePage = (function() {
     const staff = staffSpace();
 
     homeContainer.append(logo, info, staff);
-    homeContent.append(homeContainer);
 
     return {
         homeContainer
