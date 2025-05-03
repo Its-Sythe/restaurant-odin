@@ -1,10 +1,13 @@
 const homePage = (function() {
     const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    const contentSpace = document.getElementById("content");
+    const homeContent = document.getElementById("content");
 
     function createDiv() {
         return document.createElement("div");
     }
+
+    const homeContainer = createDiv();
+    homeContainer.id  = "homeContainer";
 
     function logoSpace() {
         const logoContainer = createDiv();
@@ -70,6 +73,14 @@ const homePage = (function() {
     const info = infoSpace();
     const staff = staffSpace();
 
-    contentSpace.append(logo, info, staff)
+    homeContainer.append(logo, info, staff);
+    homeContent.append(homeContainer);
+
+    return {
+        homeContainer
+    }
 
 })();
+
+export const home = homePage;
+
